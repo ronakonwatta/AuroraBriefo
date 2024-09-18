@@ -1,0 +1,30 @@
+
+# AuroraBriefo License Agreement
+
+**Version 1.0 - September 2024**
+
+## 1. License Grant
+This license grants Ronakon Wattanamongkolchoke ("Licensee") the exclusive right to use, modify, and distribute the software known as AuroraBriefo ("Software"). No other party is permitted to use, copy, distribute, or modify the Software without the express written consent of the Licensee.
+
+## 2. Scope of Use
+The Licensee may:
+- Install and use the Software on any devices they own or control.
+- Modify the Software source code for personal use only.
+- Create derivative works from the Software, but these must not be distributed.
+
+## 3. Restrictions
+- The Software may not be sold, sublicensed, or transferred to any third party.
+- The Software must not be posted or distributed on public platforms, repositories, or websites.
+- Any reverse-engineering or redistribution is strictly prohibited.
+
+## 4. Ownership
+The author retains full ownership of the Software and all rights not expressly granted in this Agreement.
+
+## 5. Termination
+This License will remain in effect as long as the Licensee complies with all terms. Breach of any terms will result in immediate termination of this License.
+
+## 6. Disclaimer
+The Software is provided "as-is" without any warranties, and the author is not liable for any damages arising from its use.
+
+## License
+This project is licensed under the **AuroraBriefo License Agreement**. See the [LICENSE](LICENSE.txt) file for more details.
