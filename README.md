@@ -36,7 +36,7 @@ To run **AuroraBriefo**, ensure you have the following installed:
    Install the necessary Python packages by running:
 
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 3. **Run the application:**
@@ -44,10 +44,18 @@ To run **AuroraBriefo**, ensure you have the following installed:
    Start the Flask server by running:
 
    ```bash
-   python app.py
+   python3 code/app.py
    ```
 
-4. **Access the app:**
+4. **Run Unit Tests:**
+
+   To run the unit tests, use:
+
+   ```bash
+   python3 -m unittest code/test_app.py
+   ```
+
+5. **Access the app:**
 
    Open your browser and navigate to `http://<your-server-ip>:5000` to use the AuroraBriefo web interface for summarizing documents.
 
@@ -64,22 +72,28 @@ To run **AuroraBriefo**, ensure you have the following installed:
 
 ## Project Structure
 
-Here’s the project structure based on your current setup:
+Here’s the updated project structure:
 
 ```plaintext
 AuroraBriefo/
 │
-├── code/                # Application code directory
-│   ├── app.py           # Main Flask application
-│   └── ...              # Additional code files
-├── models/              # Directory for any model-related data
-├── data/                # Directory for storing datasets
-├── apt.txt              # List of system dependencies for apt-get
-├── variables.env        # Environment variables file
-├── preBuild.bash        # Pre-build script
-├── postBuild.bash       # Post-build script
-├── requirements.txt     # Python dependencies for the project
-└── README.md            # Project documentation (this file)
+├── Makefile              # Commands for installing, testing, and running the app
+├── README.md             # Project documentation (this file)
+├── apt.txt               # List of system dependencies for apt-get
+├── code/                 # Code directory
+│   ├── Untitled.ipynb    # Jupyter notebook (if needed)
+│   ├── app.ipynb         # Main application notebook
+│   ├── app.py            # Flask app
+│   ├── templates/        # Directory for HTML files
+│   │   └── index.html    # Main HTML file
+│   └── test_app.py       # Unit tests for the app
+├── data/                 # Directory for storing datasets or outputs
+│   └── scratch/          # Sub-directory for temporary data
+├── models/               # Directory for model-related files
+├── postBuild.bash        # Post-build script (optional)
+├── preBuild.bash         # Pre-build script (optional)
+├── requirements.txt      # Python dependencies for the project
+└── variables.env         # Environment variables file
 ```
 
 ## Built With
