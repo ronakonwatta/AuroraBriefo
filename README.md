@@ -1,9 +1,107 @@
-# Project Name
-This project is ________. (Describe the main goals of the project. Limit to 1-2 sentences)
+
+# AuroraBriefo
+
+**AuroraBriefo** is an AI-powered tool designed to help businesses summarize lengthy and complex documents into clear, concise insights, allowing for faster and more informed decisions.
 
 ## Description
-Optional section to provide a more detailed overview of the project.
+
+AuroraBriefo leverages state-of-the-art Natural Language Processing (NLP) models to transform lengthy reports, legal documents, and other business materials into short, actionable insights. By summarizing essential information, the tool streamlines decision-making processes and boosts productivity for enterprise users.
+
+### Key Features:
+- Customizable summary length options (short, medium, detailed).
+- Fast and accurate, powered by the **BART** model from Hugging Face's Transformers library.
+- Summarizes various types of business documents with ease.
 
 ## Getting Started
-Optional section to summarize important steps and how to use the project & apps in the project
 
+### Prerequisites
+
+To run **AuroraBriefo**, ensure you have the following installed:
+- Python 3.x
+- Flask
+- Hugging Face Transformers
+- PyTorch
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository-url>
+   cd aurorabriefo
+   ```
+
+2. **Install dependencies:**
+
+   Install the necessary Python packages by running:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the application:**
+
+   Start the Flask server by running:
+
+   ```bash
+   python app.py
+   ```
+
+4. **Access the app:**
+
+   Open your browser and navigate to `http://<your-server-ip>:5000` to use the AuroraBriefo web interface for summarizing documents.
+
+## Usage
+
+1. **Input the Document:**
+   - On the main page, paste your document into the provided text area.
+
+2. **Choose Summary Length:**
+   - Select from **Short**, **Medium**, or **Detailed** summary length options depending on the level of detail required.
+
+3. **Get Summary:**
+   - Click **Summarize** to generate a summary. The result will be displayed instantly on the same page.
+
+## Project Structure
+
+Here’s the project structure based on your current setup:
+
+```plaintext
+AuroraBriefo/
+│
+├── code/                # Application code directory
+│   ├── app.py           # Main Flask application
+│   └── ...              # Additional code files
+├── models/              # Directory for any model-related data
+├── data/                # Directory for storing datasets
+├── apt.txt              # List of system dependencies for apt-get
+├── variables.env        # Environment variables file
+├── preBuild.bash        # Pre-build script
+├── postBuild.bash       # Post-build script
+├── requirements.txt     # Python dependencies for the project
+└── README.md            # Project documentation (this file)
+```
+
+## Built With
+
+- [Flask](https://flask.palletsprojects.com/) - Web framework for Python.
+- [Hugging Face Transformers](https://huggingface.co/transformers/) - NLP models for text summarization.
+- [PyTorch](https://pytorch.org/) - Deep learning framework used to run the NLP models.
+
+## Contributing
+
+We welcome contributions to improve AuroraBriefo. Please follow these steps for contributing:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature-name`.
+3. Commit your changes: `git commit -m 'Add new feature'`.
+4. Push to the branch: `git push origin feature/your-feature-name`.
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, reach out to **Ronakon Wattanamongkolchoke** at [your-email@example.com].

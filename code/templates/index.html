@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuroraBriefo - AI Document Summarizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+        select, input[type="submit"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AuroraBriefo - AI Document Summarizer</h1>
+        <form id="summarizeForm">
+            <label for="document">Paste your document:</label><br>
+            <textarea name="document" id="document" placeholder="Paste your document here..."></textarea><br><br>
+            
+            <label for="summary_length">Choose summary length:</label><br>
+            <select name="summary_length" id="summary_length">
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="detailed">Detailed</option>
+            </select><br><br>
+            
+            <input type="submit" value="Summarize">
+        </form>
+
+        <h2>Summary</h2>
+        <p id="summary"></p>
+    </div>
+
+    <script>
+        document.getElementById('summarizeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const document = document.getElementById('document').value;
+            const summary_length = document.getElementById('summary_length').value;
+
+            fetch('/summarize', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `document=${encodeURIComponent(document)}&summary_length=${encodeURIComponent(summary_length)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('summary').textContent = data.summary;
+            });
+        });
+    </script>
+</body>
+</html>
