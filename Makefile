@@ -3,9 +3,12 @@
 # Variables
 PYTHON = python3
 PIP = pip3
-APP = app.py
-TEST = test_app.py
+APP = code/app.py
+TEST = code/test_app.py
 REQUIREMENTS = requirements.txt
+
+# Set PYTHONPATH to include the code directory
+export PYTHONPATH := $(PYTHONPATH):./code
 
 # Install dependencies
 install:

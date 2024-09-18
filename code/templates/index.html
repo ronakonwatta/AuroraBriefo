@@ -45,18 +45,28 @@
 
     <script>
         document.getElementById('summarizeForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const document = document.getElementById('document').value;
-            const summary_length = document.getElementById('summary_length').value;
+            event.preventDefault();  // Prevent default form submission
+
+            const documentText = document.getElementById('document').value;  // Rename 'document' to 'documentText'
+            const summaryLength = document.getElementById('summary_length').value;
 
             fetch('/summarize', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: `document=${encodeURIComponent(document)}&summary_length=${encodeURIComponent(summary_length)}`
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    document: documentText,  // Use 'documentText' here
+                    summary_length: summaryLength
+                })
             })
             .then(response => response.json())
             .then(data => {
+                // Display the summary in the 'summary' element
                 document.getElementById('summary').textContent = data.summary;
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
         });
     </script>
